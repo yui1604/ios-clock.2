@@ -1,0 +1,90 @@
+body {
+  margin: 0;
+  background-color: black;
+  color: white;
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.wrapper {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+
+.clock {
+  width: 250px;
+  height: 250px;
+  border: 6px solid white;
+  border-radius: 50%;
+  position: relative;
+}
+
+.center-point {
+  width: 12px;
+  height: 12px;
+  background-color: white;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}
+
+.hand {
+  width: 2px;
+  background-color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-origin: bottom center;
+  transform: translate(-50%, -100%) rotate(0deg);
+  transition: all 0.05s ease-in-out;
+}
+
+.hand.hour {
+  height: 60px;
+  width: 4px;
+  background-color: white;
+}
+
+.hand.minute {
+  height: 90px;
+  width: 3px;
+  background-color: white;
+}
+
+.hand.second {
+  height: 100px;
+  width: 2px;
+  background-color: orange;
+}
+
+.calendar {
+  color: white;
+  font-size: 14px;
+  text-align: left;
+}
+
+.calendar table {
+  border-collapse: collapse;
+  margin-top: 8px;
+}
+
+.calendar th,
+.calendar td {
+  padding: 4px 6px;
+  text-align: center;
+  width: 24px;
+  height: 24px;
+}
+
+.today {
+  background-color: white;
+  color: black;
+  border-radius: 50%;
+}
